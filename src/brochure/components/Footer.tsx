@@ -31,6 +31,8 @@ export function Footer({ footer }: FooterProps) {
                 <a
                   key={index}
                   href={social.href}
+                  target={social.target}
+                  rel="noopener noreferrer"
                   className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-clay-accent hover:border-clay-accent transition-all duration-300"
                 >
                   <Icon className="size-5" />
@@ -77,6 +79,8 @@ export function Footer({ footer }: FooterProps) {
             <a
               key={link.label}
               href={link.href}
+              target={link.target}
+              rel="noopener noreferrer"
               className="text-white/60 hover:text-white transition-colors"
             >
               {link.label}

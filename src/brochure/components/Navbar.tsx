@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Menu } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import type { NavLink } from "@/brochure/data/data";
 
 interface NavbarProps {
@@ -19,7 +18,7 @@ export function Navbar({ logoUrl, links }: NavbarProps) {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md flex justify-between items-center px-6 max-w-[1200px] mx-auto transition-all ${
+      className={`fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md flex justify-between items-center px-6 max-w-full mx-auto transition-all ${
         scrolled ? "shadow-md py-3" : "py-4"
       }`}
     >
@@ -36,14 +35,20 @@ export function Navbar({ logoUrl, links }: NavbarProps) {
           <a
             key={link.href}
             href={link.href}
+            target={link.target}
             className="text-muted-foreground hover:text-primary font-semibold transition-colors duration-200"
           >
             {link.label}
           </a>
         ))}
-        <Button className="rounded-lg px-6 py-2.5 h-auto font-bold shadow-sm hover:bg-moss-container active:scale-95">
+        <a
+          href="https://www.rematedeterrenos.cl/#proyectos"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rounded-full px-6 py-2.5 h-auto font-semibold text-muted-foreground hover:text-primary shadow-sm bg-on-primary-container hover:bg-moss-container active:scale-95"
+        >
           Ver Catálogo
-        </Button>
+        </a>
       </div>
 
       <button className="md:hidden text-primary p-2" aria-label="Abrir menú">

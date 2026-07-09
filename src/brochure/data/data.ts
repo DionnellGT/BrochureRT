@@ -1,9 +1,8 @@
-// Datos del Brochure "Remate de Terrenos Chiloé"
-// Centraliza todo el contenido para que los componentes solo se encarguen de la presentación.
 
 export interface NavLink {
   label: string;
   href: string;
+  target?: "_blank";
 }
 
 export interface QuickNavLink {
@@ -18,7 +17,7 @@ export interface HeroContent {
   title: string;
   description: string;
   primaryCta: { label: string; href: string };
-  secondaryCta: { label: string };
+  secondaryCta: { label: string; href: string; fileName: string };
   backgroundImage: string;
 }
 
@@ -63,11 +62,13 @@ export interface GalleryImage {
 export interface FooterLink {
   label: string;
   href: string;
+  target?: "_blank";
 }
 
 export interface FooterSocial {
-  icon: "share" | "mail" | "phone";
+  icon: "mail" | "phone";
   href: string;
+  target?: "_blank";
 }
 
 export interface BrochureData {
@@ -110,9 +111,7 @@ export const brochureData: BrochureData = {
   navLinks: [
     { label: "Proyectos", href: "#proyectos" },
     { label: "Plusvalía", href: "#caracteristicas" },
-    { label: "Asesoría", href: "#asesoria" },
-    { label: "Financiamiento", href: "#financiamiento" },
-    { label: "Contacto", href: "#contacto" },
+    { label: "Contacto", href: "https://api.whatsapp.com/send/?phone=56949437974&text=Hola%2C+me+gustar%C3%ADa+recibir+m%C3%A1s+informaci%C3%B3n&type=phone_number&app_absent=0", target: "_blank" },
   ],
   quickNavLinks: [
     { id: "aguas-aucar", label: "Aguas de Aucar", href: "#aguas-aucar", highlighted: true },
@@ -128,7 +127,11 @@ export const brochureData: BrochureData = {
     description:
       "Invierta en el patrimonio natural del sur del mundo. Terrenos exclusivos diseñados para la conservación, con plusvalía garantizada y seguridad jurídica.",
     primaryCta: { label: "Explorar Lotes", href: "#proyectos" },
-    secondaryCta: { label: "Descargar Brochure" },
+    secondaryCta: {
+      label: "Descargar Brochure",
+      href: "/brochure-remate-terrenos-chiloe.pdf",
+      fileName: "Brochure-Remate-de-Terrenos-Chiloe.pdf",
+    },
     backgroundImage:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuBrMPMGs8wdpD04Nkj4Rult89h92KN_DGZWLOvYicTRVtWD9UapqlZefQC1GFGMVCReE6hw7VzbMV566pRHZSuzOWnv9H0z_RrEPfy5GfIkut_7G_WTq8p4-4QZstbhaVm23gH_OaU5aL5C4hNmGbg24-WXfxTUiC5B73NnUBwgEazigOX6nTcJ-DKtO48XYT1JUBAZuCMdhzX2hAwI_ZEbo7uaKhloSeUw04Rp1Imqqm4fqN4rNMRuc3iE7tYXz6FkTXal7CBf56xQ",
   },
@@ -490,9 +493,8 @@ export const brochureData: BrochureData = {
     quote:
       '"Nuestra misión es conectar a las personas con la tierra de forma segura, respetando siempre el legado natural de la Patagonia Insular."',
     socials: [
-      { icon: "share", href: "#" },
-      { icon: "mail", href: "#" },
-      { icon: "phone", href: "#" },
+      { icon: "mail", href: "https://mail.google.com/mail/?view=cm&fs=1&to=contacto@rematedeterrenos.cl&su=Consulta&body=Hola,%20me%20interesa...", target: "_blank" },
+      { icon: "phone", href: "https://api.whatsapp.com/send/?phone=56949437974&text=Hola%2C+me+gustar%C3%ADa+recibir+m%C3%A1s+informaci%C3%B3n&type=phone_number&app_absent=0", target: "_blank" },
     ],
     corporateSite: { label: "Sitio Corporativo", url: "https://rematedeterrenos.cl" },
     projectsLinks: [
@@ -506,7 +508,7 @@ export const brochureData: BrochureData = {
     infoLinks: [
       { label: "Términos y Condiciones", href: "#" },
       { label: "Política de Privacidad", href: "#" },
-      { label: "Contacto de Ventas", href: "#" },
+      { label: "Contacto de Ventas", href: "https://api.whatsapp.com/send/?phone=56949437974&text=Hola%2C+me+gustar%C3%ADa+recibir+m%C3%A1s+informaci%C3%B3n&type=phone_number&app_absent=0", target: "_blank" },
     ],
     copyright: "© 2024 Remate de Terrenos Chiloé. Todos los derechos reservados.",
   },

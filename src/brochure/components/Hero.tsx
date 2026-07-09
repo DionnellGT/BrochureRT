@@ -37,9 +37,13 @@ export function Hero({ hero }: HeroProps) {
           >
             {hero.primaryCta.label} <ArrowDown className="size-5" />
           </a>
-          <button className="bg-white/10 backdrop-blur-md text-white px-8 py-4 rounded-xl font-bold text-lg border border-white/30 hover:bg-white/20 transition-all flex items-center gap-2">
+          <a
+            href={hero.secondaryCta.href}
+            download={hero.secondaryCta.fileName}
+            className="bg-white/10 backdrop-blur-md text-white px-8 py-4 rounded-xl font-bold text-lg border border-white/30 hover:bg-white/20 transition-all flex items-center gap-2"
+          >
             {hero.secondaryCta.label} <Download className="size-5" />
-          </button>
+          </a>
         </div>
       </div>
     </header>
