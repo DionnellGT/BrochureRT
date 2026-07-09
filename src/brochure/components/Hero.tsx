@@ -14,7 +14,7 @@ export function Hero({ hero }: HeroProps) {
           alt="Chiloé Landscape"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-forest-deep/40 via-forest-deep/20 to-background/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-forest-deep/40 via-forest-deep/20 to-background/80" />
       </div>
 
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto mt-20">
