@@ -1,8 +1,8 @@
 import { Mail, Phone, Share2, ExternalLink, type LucideIcon } from "lucide-react";
-import type { BrochureData } from "@/brochure/data/data";
+import type { FooterData } from "../data/footer";
 
 interface FooterProps {
-  footer: BrochureData["footer"];
+  footer: FooterData;
 }
 
 const SOCIAL_ICONS: Record<"share" | "mail" | "phone", LucideIcon> = {

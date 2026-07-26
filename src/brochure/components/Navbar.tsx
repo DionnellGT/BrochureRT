@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu } from "lucide-react";
-import type { NavLink } from "@/brochure/data/data";
+import type { NavLink } from "../data/navbar";
 
 interface NavbarProps {
   logoUrl: string;

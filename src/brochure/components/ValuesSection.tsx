@@ -1,5 +1,5 @@
 import { Leaf, MapPin, ShieldCheck, type LucideIcon } from "lucide-react";
-import type { ValueItem } from "@/brochure/data/data";
+import type { ValueItem } from "../data/values";
 
 interface ValuesSectionProps {
   values: ValueItem[];

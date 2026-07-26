@@ -1,5 +1,5 @@
 import { Map } from "lucide-react";
-import type { QuickNavLink } from "@/brochure/data/data";
+import type { QuickNavLink } from "@/brochure/data/quickNavLinks";
 
 interface QuickNavProps {
   links: QuickNavLink[];

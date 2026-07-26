@@ -1,5 +1,5 @@
 import { Headset, PiggyBank, TrendingUp, Wallet, type LucideIcon } from "lucide-react";
-import type { FeatureCard } from "@/brochure/data/data";
+import type { FeatureCard } from "../data/features";
 
 interface FeaturesSectionProps {
   eyebrow: string;
