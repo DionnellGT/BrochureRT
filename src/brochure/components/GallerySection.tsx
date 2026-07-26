@@ -1,10 +1,9 @@
-import { ArrowRight } from "lucide-react";
-import type { GalleryImage } from "@/brochure/data/data";
+import type { GalleryImage } from "../data/gallery";
 
 interface GallerySectionProps {
   title: string;
   subtitle: string;
-  ctaLabel: string;
+  ctaLabel?: string;
   images: GalleryImage[];
 }
 
@@ -14,7 +13,7 @@ const SIZE_CLASSES: Record<GalleryImage["size"], string> = {
   wide: "col-span-2",
 };
 
-export function GallerySection({ title, subtitle, ctaLabel, images }: GallerySectionProps) {
+export function GallerySection({ title, subtitle, images }: GallerySectionProps) {
   return (
     <section className="py-20">
       <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-4">
@@ -24,9 +23,7 @@ export function GallerySection({ title, subtitle, ctaLabel, images }: GallerySec
           </h2>
           <p className="text-secondary font-medium">{subtitle}</p>
         </div>
-        <button className="text-primary font-bold flex items-center gap-2 hover:opacity-70 group">
-          {ctaLabel} <ArrowRight className="size-4 group-hover:translate-x-1 transition-transform" />
-        </button>
+        
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[250px]">
