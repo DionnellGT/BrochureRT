@@ -37,46 +37,6 @@ export interface PriceList {
   lots: Lot[];
 }
 
-// ---- Payloads (bodies) ----
-
-export interface LotPayload {
-  lot: number;
-  typology: string;
-  area: number;
-  priceList?: number;
-  installmentPrice?: number;
-  cashPrice: number;
-}
-
-export interface CreatePriceListPayload {
-  marca: Marca;
-  tipo: TipoLista;
-  name: string;
-  description?: string;
-  has360Tour?: string;
-  lots?: LotPayload[];
-}
-
-export type UpdatePriceListPayload = Partial<CreatePriceListPayload>;
-
-export type UpdateLotPayload = Partial<LotPayload>;
-
-export interface AddLotsPayload {
-  lots: LotPayload[];
-}
-
-export interface DeleteResult {
-  id: string;
-  message: string;
-}
-
-export interface BulkDeleteResult {
-  marca: Marca;
-  tipo: TipoLista;
-  deleted: number;
-  message: string;
-}
-
 export interface BrochureInfo {
   marca: Marca;
   tipo: TipoLista;
