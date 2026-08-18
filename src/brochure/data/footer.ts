@@ -15,7 +15,6 @@ export interface FooterData {
     quote: string;
     socials: FooterSocial[];
     corporateSite: { label: string; url: string };
-    projectsLinks: FooterLink[];
     infoLinks: FooterLink[];
     copyright: string;
 }
@@ -31,17 +30,10 @@ export const footer: FooterData = {
       { icon: "phone", href: "https://api.whatsapp.com/send/?phone=56949437974&text=Hola%2C+me+gustar%C3%ADa+recibir+m%C3%A1s+informaci%C3%B3n&type=phone_number&app_absent=0", target: "_blank" },
     ],
     corporateSite: { label: "Sitio Corporativo", url: "https://rematedeterrenos.cl" },
-    projectsLinks: [
-      { label: "Quemchi Aucar", href: "#quemchi-aucar" }, 
-      { label: "Paraiso Belben", href: "#paraiso-belben" },
-      { label: "Choroihue", href: "#choroihue" },
-      { label: "Fundo Bellavista", href: "#fundo-bellavista" },
-      { label: "Hacienda Rio Frio", href: "#hacienda-rio-frio" },
-    ],
+    
     infoLinks: [
-      { label: "Términos y Condiciones", href: "#" },
-      { label: "Política de Privacidad", href: "#" },
-      { label: "Contacto de Ventas", href: "https://api.whatsapp.com/send/?phone=56949437974&text=Hola%2C+me+gustar%C3%ADa+recibir+m%C3%A1s+informaci%C3%B3n&type=phone_number&app_absent=0", target: "_blank" },
+      { label: "Términos y Condiciones", href: "https://www.rematedeterrenos.cl/terminos-y-condiciones", target: "_blank" },
+      { label: "Política de Privacidad", href: "https://www.rematedeterrenos.cl/politica-de-privacidad", target: "_blank" },
     ],
     copyright: "© 2024 Remate de Terrenos Chiloé. Todos los derechos reservados.",
 }

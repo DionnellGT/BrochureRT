@@ -1,6 +1,6 @@
 import { Outlet, useLocation } from "react-router";
-import { FeaturesSection, Footer, GallerySection, Hero, Navbar, QuickNav, ValuesSection } from "../components";
-import { hero, navLinks, featuresSection, gallerySection, footer, values } from "../data"
+import { FeaturesSection, Footer, GallerySection, Hero, Navbar, QuickNav } from "../components";
+import { hero, navLinks, featuresSection, gallerySection, footer } from "../data"
 import type { QuickNavLink } from "../data/quickNavLinks";
 import { Marca, TipoLista } from "@/api";
 import { useProjectsByMarcaAndTipo } from "../hook/useProjectsByMarcaAndTipo";
@@ -8,7 +8,7 @@ import { useProjectsByMarcaAndTipo } from "../hook/useProjectsByMarcaAndTipo";
 
 export const BrochureLayout = () => {
 
-    const logoUrl = "https://lh3.googleusercontent.com/aida-public/AB6AXuBLD2cUjgyi9jdvQ4SKjF3Ruis0Dba5vPxIy90AAnh8QUbjBKWUv3RAlFgIvxkfBxE9IYzT8t7IaAcRKRAcsE50P2nGT6VKIGK5jTje0HFH3-Cnbbo57_cjUDNQZR63i8O36wigsJBTqJLaxDmgjgiceINtZYHUjk9DUPcGIbj7PVWrY1802mTeVU5F_lNCOfaKbH5YInDlgau43sbyW9yLHfOYzQyqfdZce9DHsfAQslp0lfvmt4oBppFPqxQGPHbiAx5CJnMgQkDR"
+    const logoUrl = "/logoRT.png"
      
     const location = useLocation();
     const tipo = location.pathname.includes("vendedores") ? TipoLista.POSTVENTA : TipoLista.CLIENTE;
@@ -34,7 +34,7 @@ export const BrochureLayout = () => {
                   title={featuresSection.title}
                   cards={featuresSection.cards}
                 />
-                <ValuesSection values={values} />
+                {/*<ValuesSection values={values} />} */}
                 <GallerySection
                   title={gallerySection.title}
                   subtitle={gallerySection.subtitle}
