@@ -20,16 +20,10 @@ export const featuresSection: FeaturesSection = {
         icon: "trending-up",
         title: "Alta Plusvalía Garantizada",
         description:
-          "Chiloé se ha consolidado como el destino de inversión más seguro de Chile. El crecimiento del turismo y la infraestructura asegura un retorno sólido y sostenido en el tiempo.",
-        size: "large",
+          "Region de Los Lagos: una inversión segura, con alta proyección y rentabilidad a largo plazo.",
+        size: "small",
       },
-      {
-        icon: "piggy-bank",
-        title: "Bajo Costo de Mantenimiento",
-        description:
-          "Suelos fértiles que requieren mínima intervención para proyectos de conservación o habitacionales.",
-        size: "medium",
-      },
+      
       {
         icon: "headset",
         title: "Asesoría Legal",
@@ -39,7 +33,7 @@ export const featuresSection: FeaturesSection = {
       {
         icon: "wallet",
         title: "Financiamiento",
-        description: "Hasta 11 cuotas sin interés directamente con nosotros.",
+        description: "Hasta 24 cuotas sin interés directamente con nosotros.",
         size: "small",
       },
     ],
