@@ -18,5 +18,5 @@ export const hero: HeroContent = {
       label: "Descargar Brochure",
     },
     backgroundImage:
-      "/Banner.jpeg",
+      "/banner2.jpg",
   }
