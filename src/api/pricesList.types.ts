@@ -24,6 +24,7 @@ export interface Lot {
   area: number;
   priceList: number | null;
   installmentPrice: number | null;
+  installmentPrice2: number | null;
   cashPrice: number;
 }
 
